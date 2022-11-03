@@ -1,4 +1,5 @@
-// import pizza_icon from "./"
+/* eslint-disable */
+
 import './App.css';
 import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";

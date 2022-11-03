@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import { BrowserRouter as Router, Switch, Route, Redirect, matchPath } from "react-router-dom";
