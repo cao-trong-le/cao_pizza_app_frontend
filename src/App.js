@@ -8,9 +8,11 @@ import { BrowserRouter as Router, Switch, Route, Redirect, matchPath } from "rea
 import { 
   HeaderComponent,
 
-  MainBodyComponent,
+  // MainBodyComponent,
   HomeComponent,
 } from './components';
+
+import { ProductsComponent } from 'components/main_body/home_component_folder/menu_folder/products';
 
 const App = () => {
   const router = () => {
@@ -24,9 +26,9 @@ const App = () => {
             return <Redirect to="/menu/" />
           }}
         />
-        <Route exact path="/menu/" component={HomeComponent} />
-        {/* <Route exact path="/home/posts/:post_code/" component={PostViewComponent} />
-        <Route exact path="/new/post/" component={CreatePostComponent} />
+        <Route exact path="/home/menu/" component={HomeComponent} />
+        <Route exact path="/home/menu/products/" component={ProductsComponent} />
+        {/* <Route exact path="/new/post/" component={CreatePostComponent} />
         <Route exact path="/register/" component={RegisterFormComponent} />
         <Route exact path="/login/" component={LoginFormComponent} /> */}
       </Switch>
@@ -44,8 +46,24 @@ const App = () => {
   );
 }
 
-const AppComponent = styled.div``
+const AppComponent = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+`
 
-// const MainBodyComponent = styled.div``
+const MainBodyComponent = styled.div`
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media only screen and (max-width: 800px) {
+      width: 100%;
+  }
+`
 
 export default App;
