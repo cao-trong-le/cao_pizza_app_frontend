@@ -13,6 +13,8 @@ import {
 } from './components';
 
 import { ProductsComponent } from 'components/main_body/home_component_folder/menu_folder/products';
+import { CustomizeProductComponent } from 'components/main_body/home_component_folder/menu_folder/customize_product';
+
 
 const App = () => {
   const router = () => {
@@ -23,11 +25,12 @@ const App = () => {
           exact
           path="/"
           render={() => {
-            return <Redirect to="/menu/" />
+            return <Redirect to="/home/menu/" />
           }}
         />
         <Route exact path="/home/menu/" component={HomeComponent} />
         <Route exact path="/home/menu/products/" component={ProductsComponent} />
+        <Route exact path="/product/customize/" component={CustomizeProductComponent} />
         {/* <Route exact path="/new/post/" component={CreatePostComponent} />
         <Route exact path="/register/" component={RegisterFormComponent} />
         <Route exact path="/login/" component={LoginFormComponent} /> */}
